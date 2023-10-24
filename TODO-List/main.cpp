@@ -1,15 +1,12 @@
 #include <iostream>
-#include "TaskCollection.hpp"
+#include "UserInterface.hpp"
 
 int main() {
+  TaskCollection task;
+  UserInterface interface(&task);
 
-  TaskCollection tasks;
-  tasks.insertTask(1, "TEST12ASASDASDDASDSA3");
-  tasks.insertTask(0, "TESTASDSA3");
-
-  std::cout << tasks.getTaskAsString(0) << std::endl;
-  std::cout << tasks.getTaskAsString(1) << std::endl;
-  tasks.deleteTask(0);
-
-  std::cout << tasks.getTaskAsString(0) << std::endl;
+  while (interface.getAppStatus()) {
+    interface.showInterface();
+    interface.interfaceActivities();
+  }
 }

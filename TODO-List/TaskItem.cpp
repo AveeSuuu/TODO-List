@@ -1,8 +1,8 @@
 #include "TaskItem.hpp"
 
-TaskItem::TaskItem() { 
+TaskItem::TaskItem() {
   this->id = NULL;
-  taskStatus = false; 
+  taskStatus = false;
 }
 
 TaskItem::TaskItem(int id, const std::string& taskDescription) {
@@ -12,12 +12,16 @@ TaskItem::TaskItem(int id, const std::string& taskDescription) {
 }
 
 int TaskItem::getId() const {
-  return this->id; 
+  return this->id;
 }
 std::string TaskItem::getDescription() const {
-  return this->taskDescription; 
+  return this->taskDescription;
 }
 
-std::string TaskItem::statusToString() {
+std::string TaskItem::statusToString() const {
   return this->taskStatus ? "done" : "not done";
+}
+
+void TaskItem::setAsChecked() {
+  taskStatus = true;
 }

@@ -8,7 +8,8 @@ private:
 public:
   void insertTask(const TaskItem& task);
   void insertTask(int id, const std::string& taskDescription);
-  bool findTask(int id);
-  std::string getTaskAsString(int id);
+  void finishTask(int id);
   void deleteTask(int id);
+  bool findTask(int id) const;
+  std::string getTaskAsString(int id) const;
 };

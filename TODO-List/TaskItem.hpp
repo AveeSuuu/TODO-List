@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-class TaskItem{
+class TaskItem {
 private:
   unsigned int id;
   std::string taskDescription;
@@ -12,6 +12,7 @@ public:
 
   int getId() const;
   std::string getDescription() const;
-  std::string statusToString();
+  std::string statusToString() const;
+  void setAsChecked();
 };
 
