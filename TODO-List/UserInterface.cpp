@@ -74,6 +74,7 @@ void UserInterface::addNewTask() {
   std::string taskDescription = "Empty task";
   std::cout << "Task description: " << std::flush;
   std::cin.clear();
+  std::cin.ignore();
   std::getline(std::cin, taskDescription);
   if (taskDescription == "") {
     taskDescription = "EMPTY TASK!";
