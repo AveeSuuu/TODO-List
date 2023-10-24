@@ -1,8 +1,15 @@
 #include <iostream>
-#include "TaskItem.hpp"
+#include "TaskCollection.hpp"
 
 int main() {
 
-  TaskItem task(1, "!Test task class!");
-  std::cout << task.getId() << " " + task.getDescription() + " " + task.statusToString();
+  TaskCollection tasks;
+  tasks.insertTask(1, "TEST12ASASDASDDASDSA3");
+  tasks.insertTask(0, "TESTASDSA3");
+
+  std::cout << tasks.getTaskAsString(0) << std::endl;
+  std::cout << tasks.getTaskAsString(1) << std::endl;
+  tasks.deleteTask(0);
+
+  std::cout << tasks.getTaskAsString(0) << std::endl;
 }

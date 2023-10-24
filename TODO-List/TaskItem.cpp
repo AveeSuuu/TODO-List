@@ -1,5 +1,16 @@
 #include "TaskItem.hpp"
 
+TaskItem::TaskItem() { 
+  this->id = NULL;
+  taskStatus = false; 
+}
+
+TaskItem::TaskItem(int id, const std::string& taskDescription) {
+  this->id = id;
+  this->taskDescription = taskDescription;
+  taskStatus = false;
+}
+
 int TaskItem::getId() const {
   return this->id; 
 }
